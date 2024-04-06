@@ -28,8 +28,8 @@ class Category(models.Model):
 
 
 class ProductCart(models.Model):
-    product = models.ManyToManyField(Products, null=True)
-    user = models.ForeignKey(User, on_delete=models.CASCADE, unique=True)
+    product = models.ManyToManyField(Products)
+    user = models.OneToOneField(User, on_delete=models.CASCADE, unique=True)
 
     def __str__(self):
         return self.user.username
