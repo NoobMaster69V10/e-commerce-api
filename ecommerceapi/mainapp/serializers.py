@@ -15,3 +15,11 @@ class ProductSerializer(serializers.ModelSerializer):
     class Meta:
         model = Products
         fields = '__all__'
+
+
+class ProductCartSerializer(serializers.ModelSerializer):
+    # product = ProductSerializer(many=True)
+    class Meta:
+        model = ProductCart
+        fields = '__all__'
+
