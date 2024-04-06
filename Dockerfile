@@ -1,4 +1,4 @@
-FROM ubuntu:latest
-LABEL authors="NoobMaster69"
-
-ENTRYPOINT ["top", "-b"]
+FROM python:3
+WORKDIR /usr/src/app
+COPY requirements.txt ./
+RUN pip install -r requirements.txt
